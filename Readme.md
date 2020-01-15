@@ -10,7 +10,7 @@ pip3 install gTTS
 ``
 
 ``
-pip3 install playsound
+pip install pygame
 ``
 
 ``
@@ -20,4 +20,8 @@ pip3 install SpeechRecognition
 
 ``
 sudo apt-get install python3-pyaudio
+``
+
+``
+pip install pyaudio
 ``
