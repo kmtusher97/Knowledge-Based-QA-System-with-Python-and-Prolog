@@ -3,7 +3,7 @@ from pyswip import Prolog
 
 # text to speech 
 from gtts import gTTS
-from playsound import playsound
+import pygame
 
 # speech to text
 import speech_recognition as sr
@@ -16,7 +16,11 @@ def text_to_speech(txt):
 		language = "en"
 		obj = gTTS(text = txt, lang = language)
 		obj.save("output.mp3")
-		playsound("output.mp3")
+		pygame.mixer.init()
+		pygame.mixer.music.load("output.mp3")
+		pygame.mixer.music.play()
+		while pygame.mixer.music.get_busy() == True:
+			continue
 
 
 
@@ -103,24 +107,26 @@ elif "history of ju" in asked_question or \
 	answers = ask_question(query, question)
 	say_answers("Brief history: ", question, answers)
 
+elif "location of jahangirnagar university" in asked_question or \
+		"situated" in asked_question:
+	# Q: where is jahangirnagar university?
+	question = "Loction"
+	query = "location('jahangirnagar university', " + question + ")."
+	answers = ask_question(query, question)
+	say_answers("", question, answers)
 
-# Q: where is jahangirnagar university?
-# question = "Loction"
-# query = "location('jahangirnagar university', " + question + ")."
-# answers = ask_question(query, question)
-# say_answers("", question, answers)
+elif "area of jahangirnagar university" in asked_question:
+	# Q: where is jahangirnagar university?
+	question = "Area"
+	query = "area('jahangirnagar university', " + question + ")."
+	answers = ask_question(query, question)
+	say_answers("total area of jahangirnagar university is about ", question, answers)
 
-
-# Q: where is jahangirnagar university?
-# question = "Area"
-# query = "area('jahangirnagar university', " + question + ")."
-# answers = ask_question(query, question)
-# say_answers("total area of jahangirnagar university is about ", question, answers)
-
-
-# #Q: who is the current vice_chancellor of jahangirnagar university?
-# question = "Vice_chancellor"
-# query = "vice_chancellor('jahangirnagar university', " + question + ")."
-# answers = ask_question(query, question)
-# say_answers("The current vice chancellor of jahangirnagar university is ", question, answers)
+elif ("current" in asked_question or "present" in asked_question or "now" in asked_question) \
+		and "vice chancellor" in asked_question:
+	#Q: who is the current vice_chancellor of jahangirnagar university?
+	question = "Vice_chancellor"
+	query = "vice_chancellor('jahangirnagar university', " + question + ")."
+	answers = ask_question(query, question)
+	say_answers("The current vice chancellor of jahangirnagar university is ", question, answers)
 
