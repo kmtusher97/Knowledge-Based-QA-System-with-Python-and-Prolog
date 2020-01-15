@@ -3,6 +3,7 @@
 ``
 sudo apt install swi-prolog
 ``
+
 ``
 pip3 install pyswip
 ``
