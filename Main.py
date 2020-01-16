@@ -204,7 +204,7 @@ while flg:
     elif "about department of cse" in asked_question or \
             "about cse" in asked_question or \
             "about computer science and engineering" in asked_question or \
-            "about department of computer science and engineering" is asked_question:
+            "about department of computer science and engineering" in asked_question:
         # Q what you know about dept of CSE jahangirnagar university
         question = "Cse"
         query = "about_department_of_computer_science_and_engineering(\
@@ -215,7 +215,7 @@ while flg:
     elif "chairman of department of cse" in asked_question or \
             "chairman of cse" in asked_question or \
             "chairman of computer science and engineering" in asked_question or \
-            "chairman of department of computer science and engineering" is asked_question:
+            "chairman of department of computer science and engineering" in asked_question:
         # Q who is the chairman of dept of CSE JU?
         question = "Chairman"
         query = "chairman_of_cse('department of computer science and engineering', " \
