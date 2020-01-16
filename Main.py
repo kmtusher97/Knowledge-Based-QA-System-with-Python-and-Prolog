@@ -73,8 +73,8 @@ def listen_question():
         return "-----------------"
 
 
-# text_to_speech("Hi, I'm here to tell you about jahangirnagar university. \
-#                what do you want to know about jahangirnagar university?")
+text_to_speech("Hi, I'm here to tell you about jahangirnagar university. \
+                what do you want to know about jahangirnagar university?")
 flg = True
 while flg:
     # Q/A
