@@ -111,7 +111,8 @@ departments_under_faculty('faculty of law','department of law and justice').
 
 department('department of computer science and engineering').
 
-about_department_of_computer_science_and_engineering('jahangirnagar university is one \c
+about_department_of_computer_science_and_engineering('the department of computer science and \c
+    engineering of jahangirnagar university is one \c
     of the leading cse department in bangladesh. \c
 	since its inception in 1991, the Department is playing a vital role in developing \c
 	skilled ict professional and researchers. \c
