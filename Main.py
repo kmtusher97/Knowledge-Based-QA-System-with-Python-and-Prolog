@@ -132,7 +132,8 @@ while flg:
                     "", question, answers)
 
     elif "number of faculties" in asked_question or \
-            "how many faculties" in asked_question:
+            "how many faculties" in asked_question and \
+            asked_question.find("faculty of") == -1:
         # Q how many faculties are in jahangirnagr university
         question = "Number_of_faculties"
         query = "number_of_faculties('jahangirnagar university', " + question + ")."
@@ -199,6 +200,37 @@ while flg:
         answers = ask_question(query)
         say_answers("there are 34 departments in jahangirnagar university, they are, ", \
                     "", question, answers)
+
+    elif "about department of cse" in asked_question or \
+            "about cse" in asked_question or \
+            "about computer science and engineering" in asked_question or \
+            "about department of computer science and engineering" is asked_question:
+        # Q what you know about dept of CSE jahangirnagar university
+        question = "Cse"
+        query = "about_department_of_computer_science_and_engineering(\
+                'jahangirnagar university', " + question + ")."
+        answers = ask_question(query)
+        say_answers("", "", question, answers)
+
+    elif "chairman of department of cse" in asked_question or \
+            "chairman of cse" in asked_question or \
+            "chairman of computer science and engineering" in asked_question or \
+            "chairman of department of computer science and engineering" is asked_question:
+        # Q who is the chairman of dept of CSE JU?
+        question = "Chairman"
+        query = "chairman_of_cse('department of computer science and engineering', " \
+                + question + ")."
+        answers = ask_question(query)
+        say_answers("", "is the chairman of department of computer science and engineering", question, answers)
+
+    elif "who are the developers of this project" in asked_question or \
+            "who developed" in asked_question or "who created" in asked_question:
+        # Q who developed this program?
+        question = "Developers"
+        query = "developers(" + question + ")."
+        answers = ask_question(query)
+        text_to_speech("This project is supervised by professor doctor mohammad shorif uddin.")
+        say_answers("the developers are", "", question, answers)
 
     elif "stop" in asked_question or "exit" in asked_question:
         text_to_speech("thank you, hope you have enjoyed the session")
