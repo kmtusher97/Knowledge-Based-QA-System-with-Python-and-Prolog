@@ -1,30 +1,14 @@
-## Installations
+<a><img src="https://www.python.org/static/img/python-logo.png" height="50px"/></a> <a href=""><img src="https://www.swi-prolog.org/icons/swipl.png" height="50px"/></a>
+# Knowledge Based QA System with Python and Prolog ![python](https://img.shields.io/badge/python-3.7-yellow) ![prolog](https://img.shields.io/badge/prolog-8.2.0-red)
+A knowledge-based system (KBS) is a form of artificial intelligence (AI) that aims to capture the knowledge of human experts to support decision-making. Examples of knowledge-based systems include expert systems, which are so called because of their reliance on human expertise.<br>
+This project is a simple implementation a knowledge-based system. It is a ChatBot. There a ``prolog`` file that defines the knowledge and questions are handled with ``python``. The key idea is mapping different questions for same answer.
 
-``
-sudo apt install swi-prolog
-``
+## Installations ![linux](https://img.shields.io/badge/-linux-orange)
 
-``
-pip3 install pyswip
-``
-
-``
-pip3 install gTTS
-``
-
-``
-pip install pygame
-``
-
-``
-pip3 install SpeechRecognition
-``
-
-
-``
-sudo apt-get install python3-pyaudio
-``
-
-``
-pip install pyaudio
-``
+> ``$ sudo apt install swi-prolog``<br>
+``$ pip3 install pyswip``<br>
+``$ pip3 install gTTS``<br>
+``$ pip install pygame``<br>
+``$ pip3 install SpeechRecognition``<br>
+``$ sudo apt-get install python3-pyaudio``<br>
+``$ pip install pyaudio``<br>
