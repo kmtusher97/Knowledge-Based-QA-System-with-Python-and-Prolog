@@ -3,7 +3,7 @@
 A knowledge-based system (KBS) is a form of artificial intelligence (AI) that aims to capture the knowledge of human experts to support decision-making. Examples of knowledge-based systems include expert systems, which are so called because of their reliance on human expertise.<br>
 This project is a simple implementation a knowledge-based system. It is a ChatBot. There a ``prolog`` file that defines the knowledge and questions are handled with ``python``. The key idea is mapping different questions for same answer.
 
-## Installations ![linux](https://img.shields.io/badge/-linux-orange)
+## Installation ![linux](https://img.shields.io/badge/-linux-orange)
 
 > ``$ sudo apt install swi-prolog``<br>
 ``$ pip3 install pyswip``<br>
