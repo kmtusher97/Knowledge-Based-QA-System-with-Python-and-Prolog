@@ -12,5 +12,6 @@ This project is a simple implementation a knowledge-based system. It is a ChatBo
 ``$ pip3 install SpeechRecognition``<br>
 ``$ sudo apt-get install python3-pyaudio``<br>
 ``$ pip install pyaudio``<br>
+``$ python -m pip install pyttsx3 --user `` <br>
 
  Install 'PyAudio'. Go to https://www.lfd.uci.edu/~gohlke/pythonlibs/ and download wheel file for PyAudio. Then go to download directory and open cmd in that folder. THen type 'python -m pip install (filename.whl) --user'
