@@ -2,7 +2,7 @@
 from pyswip import Prolog
 
 # text to speech
-from gtts import gTTS
+import pyttsx3
 import pygame
 
 # speech to text
@@ -11,17 +11,15 @@ import speech_recognition as sr
 import json
 import time
 
+engine = pyttsx3.init('sapi5')
+voices = engine.getProperty('voices')
+#print(voices[1].id)
+engine.setProperty('voice',voices[1].id)
+
 
 def text_to_speech(txt):
-    language = "en"
-    obj = gTTS(text=txt, lang=language)
-    obj.save("output.mp3")
-    pygame.mixer.init()
-    pygame.mixer.music.load("output.mp3")
-    pygame.mixer.music.play()
-    while pygame.mixer.music.get_busy():
-        continue
-    pygame.mixer.music.pause()
+    engine.say(txt)
+    engine.runAndWait()
 
 
 def prolog_query(query_string):
