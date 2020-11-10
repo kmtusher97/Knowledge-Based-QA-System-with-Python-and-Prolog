@@ -13,8 +13,8 @@ import time
 
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
-#print(voices[1].id)
-engine.setProperty('voice',voices[1].id)
+# print(voices[1].id)
+engine.setProperty('voice', voices[1].id)
 
 
 def text_to_speech(txt):
@@ -117,16 +117,18 @@ while flg:
         question = "Area"
         query = "area('jahangirnagar university', " + question + ")."
         answers = ask_question(query)
-        say_answers("total area of jahangirnagar university is about ", "", question, answers)
+        say_answers("total area of jahangirnagar university is about ",
+                    "", question, answers)
 
     elif ("current" in asked_question or "present" in asked_question or "now" in asked_question) \
-            and ("vice chancellor" in asked_question or \
+            and ("vice chancellor" in asked_question or
                  "vc" in asked_question):
         # Q: who is the current vice_chancellor of jahangirnagar university?
         question = "Vice_chancellor"
-        query = "vice_chancellor('jahangirnagar university', " + question + ")."
+        query = "vice_chancellor('jahangirnagar university', " + \
+            question + ")."
         answers = ask_question(query)
-        say_answers("The current vice chancellor of jahangirnagar university is ", \
+        say_answers("The current vice chancellor of jahangirnagar university is ",
                     "", question, answers)
 
     elif "number of faculties" in asked_question or \
@@ -134,25 +136,31 @@ while flg:
             asked_question.find("faculty of") == -1:
         # Q how many faculties are in jahangirnagr university
         question = "Number_of_faculties"
-        query = "number_of_faculties('jahangirnagar university', " + question + ")."
+        query = "number_of_faculties('jahangirnagar university', " + \
+            question + ")."
         answers = ask_question(query)
-        say_answers("There are ", "faculties in jahangirnagar university", question, answers)
+        say_answers(
+            "There are ", "faculties in jahangirnagar university", question, answers)
 
     elif "number of departments" in asked_question or \
             "how many departments" in asked_question:
         # Q how many departments are in jahangirnagr university
         question = "Number_of_departments"
-        query = "number_of_departments('jahangirnagar university', " + question + ")."
+        query = "number_of_departments('jahangirnagar university', " + \
+            question + ")."
         answers = ask_question(query)
-        say_answers("There are ", "departments in jahangirnagar university", question, answers)
+        say_answers(
+            "There are ", "departments in jahangirnagar university", question, answers)
 
     elif "number of institutes" in asked_question or \
             "how many institutes" in asked_question:
         # Q how many institutes are in jahangirnagr university
         question = "Number_of_institutes"
-        query = "number_of_institutes('jahangirnagar university', " + question + ")."
+        query = "number_of_institutes('jahangirnagar university', " + \
+            question + ")."
         answers = ask_question(query)
-        say_answers("There are ", "institutes in jahangirnagar university", question, answers)
+        say_answers(
+            "There are ", "institutes in jahangirnagar university", question, answers)
 
     elif "names of the faculties" in asked_question or \
             "what are the faculties" in asked_question:
@@ -160,18 +168,18 @@ while flg:
         question = "Facultiy"
         query = "faculties('jahangirnagar university', " + question + ")."
         answers = ask_question(query)
-        say_answers("there are 6 faculties are in jahangirnagar university, they are, ", \
+        say_answers("there are 6 faculties are in jahangirnagar university, they are, ",
                     "", question, answers)
 
-    elif ("names of the departments" in asked_question or \
+    elif ("names of the departments" in asked_question or
           "what are the departments" in asked_question) and \
             "under the faculty of" in asked_question:
         # Q what are the names departments in faculty of X?
-        faculties = ["faculty of mathematical and physical science", \
-                     "faculty of biological science", \
-                     "faculty of social science", \
-                     "faculty of arts and humanities", \
-                     "faculty of business studies", \
+        faculties = ["faculty of mathematical and physical science",
+                     "faculty of biological science",
+                     "faculty of social science",
+                     "faculty of arts and humanities",
+                     "faculty of business studies",
                      "faculty of law"]
         id = -1
         for i in range(6):
@@ -196,7 +204,7 @@ while flg:
         question = "Departments"
         query = "departments('jahangirnagar university', " + question + ")."
         answers = ask_question(query)
-        say_answers("there are 34 departments in jahangirnagar university, they are, ", \
+        say_answers("there are 34 departments in jahangirnagar university, they are, ",
                     "", question, answers)
 
     elif "about department of cse" in asked_question or \
@@ -219,7 +227,8 @@ while flg:
         query = "chairman_of_cse('department of computer science and engineering', " \
                 + question + ")."
         answers = ask_question(query)
-        say_answers("", "is the chairman of department of computer science and engineering", question, answers)
+        say_answers(
+            "", "is the chairman of department of computer science and engineering", question, answers)
 
     elif "who are the developers of this project" in asked_question or \
             "who developed" in asked_question or "who created" in asked_question:
@@ -227,7 +236,8 @@ while flg:
         question = "Developers"
         query = "developers(" + question + ")."
         answers = ask_question(query)
-        text_to_speech("This project is supervised by professor doctor mohammad shorif uddin.")
+        text_to_speech(
+            "This project is supervised by professor doctor mohammad shorif uddin.")
         say_answers("the developers are", "", question, answers)
 
     elif "stop" in asked_question or "exit" in asked_question:
@@ -236,7 +246,8 @@ while flg:
 
     else:
         if asked_question != "-----------------":
-            text_to_speech("Sorry, this is out of my knowledge. whould you like to continue?")
+            text_to_speech(
+                "Sorry, this is out of my knowledge. whould you like to continue?")
             confirmation = str(listen_question()).lower()
             print(confirmation)
             if "no" in confirmation or "nope" in confirmation or "stop" in confirmation:
