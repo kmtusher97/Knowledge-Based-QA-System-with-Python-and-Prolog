@@ -21,6 +21,14 @@ To build and run the program, open terminal and change directory to the program 
 
 This program can be built and run on windows too. First install ``prolog``, ``pip``. Then run the commands in the commands in the ``cmd`` terminal to build and run the program. <br>
 
+To create executable, run
+> ``$ pyinstaller main.py``<br>
+
+Run the executable
+> ``./dist/main/main``<br>
+
+<br>
+
 ### LICENSE [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ***
 Copyright © 2022, [Kamrul Hasan](https://github.com/kmtusher97).
