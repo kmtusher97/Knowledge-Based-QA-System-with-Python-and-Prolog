@@ -31,7 +31,7 @@ Run the executable
 
 ### LICENSE [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ***
-Copyright © 2022, [Kamrul Hasan](https://github.com/kmtusher97).
-Released under the [MIT License](LICENSE).
+Copyright © 2020, [Kamrul Hasan](https://github.com/kmtusher97).
+Released under the [MIT License](LICENSE). [See more](https://github.com/kmtusher97/Knowledge-Based-QA-System-with-Python-and-Prolog/blob/master/LICENSE.md)
 
 
