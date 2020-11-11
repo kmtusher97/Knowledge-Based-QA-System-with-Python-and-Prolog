@@ -9,7 +9,7 @@ This project is a simple implementation of a knowledge-based system. It is a sim
 These types of chatbots can handle frequently asked questions in a system. For example, this program can be an extension of a university website that can handle general queries about the university.
 
 ### Build ![linux](https://img.shields.io/badge/-linux-orange)
-
+---
 Install prolog
 > `` $ sudo apt install swi-prolog `` <br>
 
@@ -19,4 +19,11 @@ To build and run the program, open terminal and change directory to the program 
 > ``$ pip install -r requirements.txt`` <br>
 > ``$ python main.py``<br>
 
-This program can be built and run on windows too. First install ``prolog``, ``pip``. Then run the commands in the commands in the ``cmd`` terminal to build and run the program.
+This program can be built and run on windows too. First install ``prolog``, ``pip``. Then run the commands in the commands in the ``cmd`` terminal to build and run the program. <br>
+
+### LICENSE [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+***
+Copyright © 2022, [Kamrul Hasan](https://github.com/kmtusher97).
+Released under the [MIT License](LICENSE).
+
+
