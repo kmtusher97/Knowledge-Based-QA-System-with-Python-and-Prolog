@@ -5,7 +5,7 @@ import json
 
 def prolog_query(query_string):
     prolog = Prolog()
-    prolog.consult("knowledge.pl")
+    prolog.consult("rules.pl")
     results = []
     for res in prolog.query(query_string):
         results.append(res)
@@ -32,7 +32,6 @@ def say_answers(prefix, suffix, question_i, answers_i):
     for ansi in answers_i:
         ansi = make_json(str(ansi))
         obj = json.loads(str(ansi))
-        print(obj[question_i])
         text = prefix + " " + obj[question_i] + " " + suffix
         print(">>>> ", text)
 
@@ -158,8 +157,9 @@ while flg:
         question = "Facultiy"
         query = "faculties('jahangirnagar university', " + question + ")."
         answers = ask_question(query)
+        print(">>>> there are 6 faculties are in jahangirnagar university, they are, ")
         say_answers(
-            "there are 6 faculties are in jahangirnagar university, they are, ",
+            "",
             "",
             question,
             answers,
