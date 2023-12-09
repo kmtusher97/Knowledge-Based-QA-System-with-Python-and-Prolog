@@ -1,4 +1,4 @@
 altgraph==0.17
-pyinstaller==4.0
+pyinstaller==5.13.1
 pyinstaller-hooks-contrib==2020.10
 pyswip==0.2.10
